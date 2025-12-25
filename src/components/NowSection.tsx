@@ -1,11 +1,11 @@
-type Item = { text: string; done?: boolean };
+ï»¿type Item = { text: string; done?: boolean };
 
 const MILESTONES: Item[] = [
-    { text: "ºô¯¸¤W½u¡]Cloudflare Pages¡^", done: true },
-    { text: "²M±¼ Lovable ²ª¸ñ¡]¼ÐÃD/¹wÄý¡^", done: true },
-    { text: "¨C¶g§ó·s 1 ±ø¬ö¿ý", done: false },
-    { text: "§â Log §ï¦¨ JSON ÀÉ¦nºûÅ@", done: false },
-    { text: "¤§«á¦A¦Ò¼{½Òµ{/¹w¬ù¡]²{¦b¥ý¤£­n¡^", done: false },
+    { text: "Site deployed on Cloudflare Pages", done: true },
+    { text: "Removed Lovable branding (title/preview)", done: true },
+    { text: "Post 1 log update per week", done: false },
+    { text: "Move logs into a JSON file (easy to edit)", done: false },
+    { text: "Consider booking/pricing later (not now)", done: false },
 ];
 
 export default function NowSection() {
@@ -13,17 +13,15 @@ export default function NowSection() {
         <section id="now" className="py-10">
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="rounded-2xl border p-5 bg-background/50">
-                    <h2 className="text-xl font-semibold">¥Ø«e¶i«×</h2>
+                    <h2 className="text-xl font-semibold">Now</h2>
                     <p className="text-muted-foreground text-sm mt-1">
-                        §ÚÁÙ¨S¶}©±¡A¥ý§â¦Û¤v·Ç³Æ¦n¡G°V½m¡B¾Ç²ß¡B«Ø¯¸¡C
+                        Not a gym business yet â€” just building habits: training, learning, and shipping.
                     </p>
 
                     <ul className="mt-4 space-y-2">
                         {MILESTONES.map((x, i) => (
                             <li key={i} className="flex items-start gap-2">
-                                <span className="mt-0.5">
-                                    {x.done ? "?" : "?"}
-                                </span>
+                                <span className="mt-0.5">{x.done ? "âœ…" : "â¬œ"}</span>
                                 <span className="text-sm">{x.text}</span>
                             </li>
                         ))}
